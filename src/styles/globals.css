@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+video {
+    clear: both;
+    display: block;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+@layer base {
+    :root {
+        --background: 109 59% 99%;
+        --foreground: 109 52% 1%;
+        --muted: 289 30% 91%;
+        --muted-foreground: 289 5% 30%;
+        --popover: 109 59% 99%;
+        --popover-foreground: 109 52% 1%;
+        --card: 109 59% 98%;
+        --card-foreground: 0 0% 0%;
+        --border: 109 15% 91%;
+        --input: 109 15% 91%;
+        --primary: 20 84% 50%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 289 68% 66%;
+        --secondary-foreground: 289 68% 6%;
+        --accent: 289 68% 66%;
+        --accent-foreground: 289 68% 6%;
+        --destructive: 19 95% 34%;
+        --destructive-foreground: 0 0% 100%;
+        --ring: 289 68% 66%;
+        --chart-1: 109 68% 66%;
+        --chart-2: 289 68% 66%;
+        --chart-3: 289 68% 66%;
+        --chart-4: 289 68% 69%;
+        --chart-5: 109 71% 66%;
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 109 34% 4%;
+        --foreground: 109 29% 100%;
+        --muted: 289 30% 9%;
+        --muted-foreground: 289 5% 70%;
+        --popover: 109 34% 4%;
+        --popover-foreground: 109 29% 100%;
+        --card: 109 34% 5%;
+        --card-foreground: 0 0% 100%;
+        --border: 109 15% 11%;
+        --input: 109 15% 11%;
+        --primary: 20 84% 50%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 289 68% 66%;
+        --secondary-foreground: 289 68% 6%;
+        --accent: 289 68% 66%;
+        --accent-foreground: 289 68% 6%;
+        --destructive: 19 95% 51%;
+        --destructive-foreground: 0 0% 100%;
+        --ring: 289 68% 66%;
+        --chart-1: 109 68% 66%;
+        --chart-2: 289 68% 66%;
+        --chart-3: 289 68% 66%;
+        --chart-4: 289 68% 69%;
+        --chart-5: 109 71% 66%;
+    }
+}
+
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
